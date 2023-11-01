@@ -1,0 +1,159 @@
+:root {
+    --color-primario: #2C5364;
+    --color-secundario: #203A43;
+    --color-terciario: #0F2027;
+    --textos: #94989b;
+    --tamanio-fuente: 16px;
+    --espaciado: 10px;
+    
+  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    padding-bottom: 20px;
+    z-index: 100 !important;
+}
+  
+.nav-menu:before,
+.nav-menu:after {
+      content: " ";
+      display: table;
+}
+  
+.nav-menu:after {
+      clear: both;
+}
+  
+.nav-menu {
+      zoom: 1;
+}
+  
+
+.menu,
+.submenu {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+  
+.menu {   
+   margin: 30px auto;
+   width: 800px;   
+   width: -moz-fit-content;
+   width: -webkit-fit-content;
+   width: fit-content; 
+}
+  
+.menu > li {
+   background: #000;
+   float: left;
+   position: relative;
+   transform: skewX(25deg);
+}
+  
+.menu a {
+   display: block;
+   color: #fff;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-family: Arial, Helvetica;
+   font-size: 14px;
+}  
+  
+.menu li:hover {
+   background: var(--textos);
+}  
+  
+.menu > li > a {
+   transform: skewX(-25deg);
+   padding: 1em 2em;
+}
+  
+  /* Dropdown */
+  .menu-item {
+   position: absolute;
+   width: 200px;
+   left: 50%; margin-left: -100px;
+   transform: skewX(-25deg);
+   transform-origin: left top;
+   z-index: 1000;
+}
+  
+.menu-item li {
+   background-color: #34495e;
+   position: relative;
+   overflow: hidden;  
+}      
+  
+.menu-item > li > a {
+   padding: 1em 2em;   
+}
+
+.menu-item > li::after {
+   content: '';
+   position: absolute;
+   top: -125%;
+   height: 100%;
+   width: 100%;   
+   box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
+}  
+  
+.menu-item > li:nth-child(odd){
+   transform: skewX(-25deg) translateX(0);
+  }
+  
+.menu-item > li:nth-child(odd) > a {
+   transform: skewX(25deg);
+}
+  
+.menu-item > li:nth-child(odd)::after {
+   right: -50%;
+   transform: skewX(-25deg) rotate(3deg);
+}    
+  
+.menu-item > li:nth-child(even){
+   transform: skewX(25deg) translateX(0);
+}
+  
+.menu-item > li:nth-child(even) > a {
+   transform: skewX(-25deg);
+}
+  
+.menu-item > li:nth-child(even)::after {
+   left: -50%;
+   transform: skewX(25deg) rotate(3deg);
+}
+  
+/* Show dropdown */
+.menu-item,
+.menu-item li {
+   opacity: 0;
+   visibility: hidden;   
+}
+  
+.menu-item li {
+   transition: .2s ease transform;
+}
+  
+.menu > li:hover .menu-item,
+.menu > li:hover .menu-item li {
+   opacity: 1;
+   visibility: visible;
+}  
+  
+.menu > li:hover .menu-item li:nth-child(even){
+   transform: skewX(25deg) translateX(15px);   
+}
+  
+.menu > li:hover .menu-item li:nth-child(odd){
+   transform: skewX(-25deg) translateX(-15px);   
+}
+
+.nolink{
+   cursor: pointer;
+}

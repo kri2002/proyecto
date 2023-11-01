@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primario: #2C5364;
+    --color-secundario: #203A43;
+    --color-terciario: #0F2027;
+    --textos: #94989b;
+    --tamanio-fuente: 16px;
+    --espaciado: 10px;
+    
+  }
+  
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--color-primario), var(--color-secundario), var(--color-terciario));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--color-primario), var(--color-secundario), var(--color-terciario)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo{
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--textos);
+}

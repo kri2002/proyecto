@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div class="login-box">
+  <h2 class="title">LISTA DE EMPLEADOS</h2>
+  <a class="btn-create">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <button routerLink="/crear-empleado">NUEVO</button>
+  </a>
+
+  <table *ngIf="listEmpleados.length>0">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Puesto</th>
+        <th>Edad</th>
+        <th>Vacio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of listEmpleados">
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.puesto}}</td>
+        <td>{{empleado.edad}}</td>
+        <td>
+          <i [routerLink]="['/editar-empleado', empleado._id]" class="fa-solid fa-edit text-primary"></i>
+          <i (click)="eliminarEmpleado(empleado._id)" class="fa-solid fa-trash text-danger"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 *ngIf="listEmpleados.length==0" class="float-center mensaje">No hay empleados</h5>
+  
+</div>
+
+

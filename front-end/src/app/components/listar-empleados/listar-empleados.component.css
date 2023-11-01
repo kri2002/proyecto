@@ -1,0 +1,219 @@
+:root {
+    --color-primario: #2C5364;
+    --color-secundario: #203A43;
+    --color-terciario: #0F2027;
+    --textos: #94989b;
+    --tamanio-fuente: 16px;
+    --espaciado: 10px;
+    
+  }
+
+.mensaje{
+    margin-top: 3rem;
+    color: var(--textos);
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+
+/* formulario */
+
+
+
+.login-box {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: -10;
+    height: auto;
+}
+
+.login-box h2 {
+    font: 700 3em/1 "Oswald", sans-serif;
+    margin: 0 0 30px;
+    padding: 0;
+    color: var(--color-primario);
+    text-align: center;
+  }
+  
+.btn-create {
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    margin: 0 calc(50% - 5rem) 3rem calc(50% - 5rem);
+    color: var(--textos);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    font-weight: bolder;
+  }
+  
+.btn-create button{
+    width: 100%;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+  }
+  
+.btn-create:hover {
+    background: var(--color-terciario);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-terciario),
+                0 0 25px var(--color-terciario),
+                0 0 50px var(--color-terciario),
+                0 0 100px var(--color-terciario);
+  }
+  
+.btn-create span {
+    position: absolute;
+    display: block;
+  }
+  
+.btn-create span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-terciario));
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+ .btn-create span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--color-terciario));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+.btn-create span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--color-terciario));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+.btn-create span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--color-terciario));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}
+
+
+/* tabla */
+
+table{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+tr th{
+    background-color: rgba(148, 152, 155, .2);
+    font-size: 2rem;
+    color: var(--textos);
+    padding-left: 1rem;
+    height: 4rem;
+    font-weight: bolder;
+}
+
+
+
+tr td{
+    font-size: 1.5rem;
+    color: var(--textos);
+    padding-left: 1rem;
+    height: 4rem;
+    text-transform: uppercase;
+}
+
+tr td:nth-child(1) {
+    width: 50%;
+}
+
+tr td:nth-child(2) {
+    width: 20%;
+}
+
+tr td:nth-child(3) {
+    width: 20%;
+}
+
+tr td:nth-child(4) {
+    width: 10%;
+}
+
+tr:nth-child(even){
+    background-color: rgba(148, 152, 155, .3);
+}
+
+tr:nth-child(odd){
+    background-color: rgba(107, 110, 112, .3);
+}
+
+thead tr {
+    background-color: rgba(148, 152, 155, .6);
+}
+
+td i {
+margin: 10%;
+cursor: pointer;
+}
+
+td i:hover{
+    transform: scale(150%);
+}
